@@ -1,7 +1,6 @@
 import React from 'react';
 import { Input } from 'react-toolbox/lib/input';
 import { Button } from 'react-toolbox/lib/button';
-import Chip from 'react-toolbox/lib/chip';
 
 class Login extends React.Component {
   constructor(props) {

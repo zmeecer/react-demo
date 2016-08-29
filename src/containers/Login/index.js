@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { login } from '../../actions/session';
-import Login from './login';
+import Login from './login.jsx';
 
 const mapStateToProps = (state) => ({
   loading: state.session.loading,

@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { browserHistory } from 'react-router';
 
 export const LOGIN_PENDING = 'LOGIN_PENDING';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -14,8 +15,9 @@ export const logout = () => ({
   type: LOGOUT,
 });
 
-export const loginPending = () => ({
+export const loginPending = (payload) => ({
   type: LOGIN_PENDING,
+  payload,
 });
 
 export const loginSuccess = (payload) => ({
@@ -38,10 +40,10 @@ export const login = (credentials) => (
         credentials,
       )
         .then(response => {
-          debugger;
           dispatch(loginSuccess({
             ...response.data.pop(),
-          }))
+          }));
+          browserHistory.push('dashboard');
         })
         .catch(error =>
           dispatch(loginFail(error))
