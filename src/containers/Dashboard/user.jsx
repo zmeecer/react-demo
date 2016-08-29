@@ -3,15 +3,16 @@ import React from 'react';
 const User = ({ user }) => (
   <dl>
     <dt>User Id</dt>
-    <dd>{user.id}</dd>
+    <dd><b>{user.id}</b></dd>
+    <br />
     <dt>User Name</dt>
-    <dd>{user.name}</dd>
+    <dd><b>{user.name}</b></dd>
   </dl>
 );
 
 User.propTypes = {
   user: React.PropTypes.shape({
-    id: React.PropTypes.string,
+    id: React.PropTypes.number,
   }).isRequired,
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import App from './App.jsx';
 import Login from './containers/Login';
 import Dashboard from './containers/Dashboard';
 import store from './store/configureStore';
@@ -8,10 +9,10 @@ import { Router, Route, IndexRedirect, browserHistory } from 'react-router';
 import './App.css';
 import 'react-toolbox/lib/commons.scss';
 
-const App = () => (
+const Main = () => (
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path='/'>
+      <Route path='/' component={App}>
         <IndexRedirect to='login' />
         <Route path='login' component={Login} />
         <Route path='dashboard' component={Dashboard} />
@@ -20,4 +21,4 @@ const App = () => (
   </Provider>
 );
 
-export default App;
+export default Main;
