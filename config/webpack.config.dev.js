@@ -84,7 +84,7 @@ module.exports = {
     preLoaders: [
       {
         test: /\.jsx?$/,
-        loader: 'eslint',
+        loaders: ['eslint', 'flowtype'],
         include: paths.appSrc,
       }
     ],

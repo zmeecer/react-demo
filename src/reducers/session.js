@@ -1,3 +1,4 @@
+// @flow
 import {
   LOGIN_PENDING,
   LOGIN_SUCCESS,
@@ -5,13 +6,19 @@ import {
   LOGOUT,
 } from '../actions/session';
 
+type SessionType = {
+  user: ?Object,
+  error: ?string,
+  loading: boolean,
+};
+
 const initialState = {
   user: null,
   error: null,
   loading: false,
 };
 
-export function session(state = initialState, action) {
+export function session(state: SessionType = initialState, action: Object) {
   switch (action.type) {
     case LOGIN_PENDING: {
       return {

@@ -8,7 +8,7 @@ module.exports = {
     // Latest stable ECMAScript features
     require.resolve('babel-preset-latest'),
     // JSX, Flow
-    require.resolve('babel-preset-react')
+    require.resolve('babel-preset-react'),
   ],
   plugins: [
     // class { handleClick = () => { } }
@@ -25,6 +25,8 @@ module.exports = {
       helpers: false,
       polyfill: false,
       regenerator: true
-    }]
+    }],
+    //
+    require.resolve("babel-plugin-transform-flow-strip-types")
   ]
 };

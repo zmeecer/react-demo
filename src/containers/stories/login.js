@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '../Login/login';
+import Login from '../Login/login.jsx';
 import { storiesOf, action } from '@kadira/storybook';
 
 storiesOf('Login', module)
